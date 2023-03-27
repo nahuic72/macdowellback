@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Factura</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2 >
+                <img class="img" src="./logo.png" alt="Logotipo">
+                <br><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <h1 class="h1">McDowell</h1>
+                <h2 class="h3">Mc Dowell, S.A.</h2>
+                <h2 class="h3">Avd/Madrid</h2>
+                <h2 class="h3">Madrid</h2>
+                <h2 class="h3">CIF: A28000256</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-10">
+                <strong>Factura Simplificada No. </strong>
+                {{num}} <br>
+            </div>
+            <div class="col-xs-2">
+                <strong>Fecha : </strong>
+                {{date}} <br>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Precio unitario</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{tablaProductos}}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-right">Subtotal</td>
+                            <td>{{subtotal}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="text-right">Impuestos</td>
+                            <td>{{impuestos}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="text-right">
+                                <h4>Total</h4>
+                            </td>
+                            <td>
+                                <h4>{{total}}</h4>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <p class="h5">Gracias por su compra</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
